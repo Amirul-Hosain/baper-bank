@@ -6,25 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking Site</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="text-4xl text-center mt-12">Let's get some <span class="text-yellow-400 text-4xl">Moooooney</span></h1>
-
     <main class="w-3/4  mx-auto">
+        <div style="display: flex;margin-bottom: 60px; justify-content: space-between;">
+            <h1 class="text-4xl mt-12">Let's get some <span class="text-yellow-400 text-4xl">Moooooney</span>
+            </h1>
+            <button style="margin-top: 50px;width: 100px; height: 40px; border: 1px solid gray;"
+                id="bank-login">Login</button>
+        </div>
+
+
         <!-- balance and transaction -->
         <section>
-            <div class='grid grid-cols-3 gap-4  mt-12'>
-                <div class="bg-green-400 p-6 text-center text-white rounded-xl">
+            <div class='row '>
+                <div class="col-lg-4 col-md-6 col-12 mt-4   bg-green-400 p-6 text-center text-white rounded-xl">
                     <h3 class="text-2xl">Deposit</h3>
                     <h1 class="text-4xl">$<span id="deposit-total">00</span></h1>
                 </div>
-                <div class="bg-yellow-400 p-6 text-center text-white rounded-xl">
+                <div class="col-lg-4 col-md-6 col-12 mt-4  bg-yellow-400 p-6 text-center text-white rounded-xl">
                     <h3 class="text-2xl">Withdraw</h3>
                     <h1 class="text-4xl">$<span id="withdraw-total">00</span></h1>
                 </div>
-                <div class="bg-purple-400 p-6 text-center text-white rounded-xl">
+                <div class="col-lg-4 col-md-6 col-12 mt-4  bg-purple-400 p-6 text-center text-white rounded-xl">
                     <h3 class=" text-2xl">Balance</h3>
                     <h1 class="text-4xl">$<span id="balance-total">1500</span></h1>
                 </div>
@@ -33,13 +42,13 @@
 
         <!-- Withdraw and deposit -->
         <!-- deposit -->
-        <section class=" grid grid-cols-2 gap-6 mt-8">
+        <section class="row grid grid-cols-2 gap-6 mt-8">
             <div class="bg-red-400 p-8 rounded-xl">
                 <div>
                     <h1 class="text-2xl mb-4">Please Deposit</h1>
                 </div>
                 <div>
-                    <input id="deposit-amount" class="w-80 border-2 border-gray-400 rounded-xl block p-1" type="text"
+                    <input id="deposit-amount" class="w-100 border-2 border-gray-400 rounded-xl block p-1" type="text"
                         placeholder="$ amount you want to deposit">
                     <div>
                         <button id="deposit-button"
@@ -49,12 +58,12 @@
             </div>
 
             <!-- withdraw -->
-            <div class="bg-red-400 p-8 rounded-xl">
+            <div class=" bg-red-400 p-8 rounded-xl">
                 <div>
                     <h1 class="text-2xl mb-4">Please Withdraw</h1>
                 </div>
                 <div>
-                    <input id="withdraw-amount" class="w-80 border-2 border-gray-400 rounded-xl block p-1" type="text"
+                    <input id="withdraw-amount" class="w-100 border-2 border-gray-400 rounded-xl block p-1" type="text"
                         placeholder="$ amount you want to withdraw">
                     <div>
                         <button id="withdraw-button"

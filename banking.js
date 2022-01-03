@@ -1,4 +1,9 @@
 
+// login
+document.getElementById("bank-login").onclick = function () {
+    location.href = "http://127.0.0.1:5500/login.html";
+};
+
 document.getElementById('deposit-button').addEventListener('click', function () {
     //amount deposited
     const depositInput = document.getElementById('deposit-amount');
